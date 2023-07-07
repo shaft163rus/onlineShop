@@ -6,12 +6,13 @@ import com.skypro.onlineshop.model.Product;
 
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.SessionScope;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 @Service
-
+@SessionScope
 public class ProductServiceImpl implements ProductService {
 
     private final ArrayList<Product> basket = new ArrayList<>();
